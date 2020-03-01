@@ -1,0 +1,13 @@
+-- Gaia DR2 Mock TAP query by John Leung
+—http://dc.zah.uni-heidelberg.de/__system__/tap/run/tap/
+SELECT ALL source_id, ra, ra_error, dec_error, dec, l, b, pmra, pmdec, pmra_error, pmdec_error, parallax, parallax_error, phot_g_mean_mag, radial_velocity, radial_velocity_error, astrometric_n_good_obs_al, ra_dec_corr, ra_pmra_corr, dec_pmra_corr, dec_pmdec_corr, pmra_pmdec_corr, ra_parallax_corr, dec_parallax_corr, parallax_pmra_corr, parallax_pmdec_corr, scan_direction_strength_k4, rv_nb_transits	
+	FROM gdr2mock.main
+        WHERE parallax > 1.5 AND parallax_error < 0.6
+
+-- possible cut variables:
+-- parallax
+-- parallax_error
+-- phot_g_mean_mag
+-- astrometric_n_good_obs_al
+-- scan_direction_strength_k4
+
